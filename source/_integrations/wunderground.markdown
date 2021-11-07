@@ -36,7 +36,7 @@ There is currently support for the following information within Home Assistant:
   - Wind Direction
   - Precipitation
   - Precipitation Rate
-- Forecasts
+- Forecasts:
   - Summary of Today
   - Weather Day/Night
   - Highest Temperature
@@ -44,17 +44,18 @@ There is currently support for the following information within Home Assistant:
   - Wind
   - Precipitation
   - Precipitation
-- Weather Station Information
+- Weather Station Information:
   - Neighborhood Reference Name
   - Local Time
   - Station ID
   - Elevation
 
-All of these will be available as sensors after the configuration.
+During configuration you can select which of these categories you want to monitor.
+All of the conditions of the selected categories will be available as sensors after the configuration.
 
 {% include integrations/config_flow.md %}
 
-All the conditions listed above will be updated every 5 minutes.
+The conditions will be updated every 5 minutes.
 
 ## Forecasts
 
@@ -64,12 +65,16 @@ All of the forecasts except for "Summary of Today" are available for the next 5 
 
 The monitored weather forecasts are 12 hour forecasts. To get a forecast for different period/daytime replace the `_1d` part of the sensor name.  e.g., `weather_2n` will give you forecast for tomorrow night. Valid values for day are `1` to `4` and valid values for daytime are `d` or `n`.
 
+## Example: Measurements
+
+![Measurements](/images/screenshots/wunderground_measurements.png)
+
 ## Example: Forecast
 
 ![Daily Forecast](/images/screenshots/wunderground_daily_forecast.png)
 
 <div class='note'>
-Note: While the platform is called “wunderground” the sensors will show up in Home Assistant as “WU” (eg: sensor.wu_weather).
+Note: While the platform is called “wunderground” the sensors will show up in Home Assistant as “wu” (eg: sensor.wu_weather).
 </div>
 
 Additional details about the API are available [here](https://docs.google.com/document/d/1eKCnKXI9xnoMGRRzOL1xPCBihNV2rOet08qpE_gArAY/edit).
